@@ -1,0 +1,7 @@
+\.idea
+venv
+
+**/experimental_data/
+
+# Ignore egg-info directory
+llm_framework.egg-info/
