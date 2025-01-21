@@ -60,32 +60,32 @@ This directory contains all experimental modules grouped by specific experiment 
 - **Subdirectories:**
   - `experimental_data/`: Stores priority-related data by experiments.
 - **Key Scripts:**
-  - `a.task_priority.histograms.py`: Generates histograms for priority coefficients (`\alpha`, `\beta`, `\gamma`).
-  - `b.task_priority.histograms.analysis.py`: Analyzes generated histogram data.
-  - `c.task_priority.heatmaps.py`: Creates heatmaps to visualize priority coefficient relationships.
+  - `a.a.task_priority.histograms.py`: Generates histograms for priority coefficients (`\alpha`, `\beta`, `\gamma`).
+  - `a.b.task_priority.histograms.analysis.py`: Analyzes generated histogram data.
+  - `a.c.task_priority.heatmaps.py`: Creates heatmaps to visualize priority coefficient relationships.
 
 #### `b.deviation_task/`
 - Handles experiments related to task-specific deviations.
 - **Subdirectories:**
   - `experimental_data/`: Stores task-related data by experiments.
 - **Key Scripts:**
-  - `a.deviation_task.synth.py`: Generates synthetic data for task-specific experiments.
-  - `b.deviation_task.experiment.empirical.py`: Executes empirical validation experiments for task deviations.
+  - `b.a.deviation_task.synth.py`: Generates synthetic data for task-specific experiments.
+  - `b.b.deviation_task.experiment.empirical.py`: Executes empirical validation experiments for task deviations.
 
 #### `c.deviation_historical/`
 - Focused on analyzing historical context deviations.
 - **Subdirectories:**
   - `experimental_data/`: Stores data by deviation historical experiments.
 - **Key Scripts:**
-  - `a.deviation_historical.model.by_agent.py`: Simulates historical deviation models for agents.
-  - `b.deviation_historical.analysis.py`: Performs data analysis for historical context deviations.
+  - `c.a.deviation_historical.model.by_agent.py`: Simulates historical deviation models for agents.
+  - `c.b.deviation_historical.analysis.py`: Performs data analysis for historical context deviations.
 
 #### `d.llm_formula/`
 - Dedicated to the experimental validation of the **L-formula**.
 - **Subdirectories:**
   - `experimental_data/`: Stores empirical datasets resulted by experiments.
 - **Key Scripts:**
-  - `a.llm_formula.empirical.py`: Runs empirical analysis for L-formula experiments.
+  - `d.a.llm_formula.empirical.py`: Runs empirical analysis for L-formula experiments.
 
 ---
 
