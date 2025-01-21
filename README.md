@@ -22,30 +22,31 @@ The root directory contains the main source folder (`src`) where all experiments
 ### `src/` Directory
 The `src/` folder is the main working directory, structured as follows:
 
+```
 src/
 ├── experiments/
 │   ├── .data/
 │   ├── a.task_priority/
 │   │   ├── experimental_data/
-│   │   ├── a.task_priority.histograms.py
-│   │   ├── b.task_priority.histograms.analysis.py
-│   │   ├── c.task_priority.heatmaps.py
+│   │   ├── a.a.task_priority.histograms.py
+│   │   ├── a.b.task_priority.histograms.analysis.py
+│   │   ├── a.c.task_priority.heatmaps.py
 │   ├── b.deviation_task/
 │   │   ├── experimental_data/
-│   │   ├── a.deviation_task.synth.py
-│   │   ├── b.deviation_task.experiment.empirical.py
+│   │   ├── b.a.deviation_task.synth.py
+│   │   ├── b.b.deviation_task.experiment.empirical.py
 │   ├── c.deviation_historical/
 │   │   ├── experimental_data/
-│   │   ├── a.deviation_historical.model.by_agent.py
-│   │   ├── b.deviation_historical.analysis.py
+│   │   ├── c.a.deviation_historical.model.by_agent.py
+│   │   ├── c.b.deviation_historical.analysis.py
 │   ├── d.llm_formula/
 │   │   ├── experimental_data/
-│   │   ├── a.llm_formula.empirical.py
+│   │   ├── d.a.llm_formula.empirical.py
 ├── utils/
 │   ├── files.py
 │   ├── objects.py
 │   ├── strings.py
-
+```
 ---
 
 ### `experiments/` Directory
@@ -109,62 +110,67 @@ Let me know if you need additional refinements!
 ## Getting Started
 ### Task Prioritization with `lambda`
 1. **Generate Priority Histograms**:
-   File: `a.task_priority.histograms.py`
+   File: `a.a.task_priority.histograms.py`
    - Generates histograms and initial datasets for priority coefficients `\alpha`, `\beta`, `\gamma`.
    - Default values: `[0.01, 0.2, 0.5, 0.9, 1]`.
    - Run:
      ```bash
-     python src/experiments/a.task_priority/a.task_priority.histograms.py
+     python src/experiments/a.task_priority/a.a.task_priority.histograms.py
      ```
 
 2. **Analyze Histogram Data**:
-   File: `histogram.analysis.prod.py`
+   File: `a.b.task_priority.histograms.analysis.py`
    - Processes histogram datasets to produce heatmaps of dependencies.
    - Run:
      ```bash
-     python src/experiments/a.task_priority/b.task_priority.histograms.analysis.py
+     python src/experiments/a.task_priority/a.b.task_priority.histograms.analysis.py
      ```
 
 3. **Create Priority Heatmaps**:
-   File: `priorities.heatmap.prod.py`
+   File: `a.c.task_priority.heatmaps.py`
    - Generates heatmaps visualizing the relationship between priority coefficients.
    - Run:
      ```bash
-     python src/experiments/a.task_priority/c.task_priority.heatmaps.py
+     python src/experiments/a.task_priority/a.c.task_priority.heatmaps.py
      ```
 
 ### Task-Specific Deviation Experiments
 1. **Independent Task Experiment**:
+   File: `b.a.deviation_task.synth.py`
    - Generate random values for experimental conditions to test the formula independently.
    - Output includes deviation metrics and alignment values.
    - Run:
      ```bash
-     python src/experiments/b.deviation_task/a.deviation_task.synth.py
+     python src/experiments/b.deviation_task/b.a.deviation_task.synth.py
      ```
      
 2. **Synchronized Task Experiment**:
+   File: `b.b.deviation_task.experiment.empirical.py`
    - `lambda` values are defined as sinusoidal dependencies, with model outputs aligned to cosine patterns for maximal consistency.
    - Run:
      ```bash
-     python src/experiments/b.deviation_task/b.deviation_task.experiment.empirical.py
+     python src/experiments/b.deviation_task/b.b.deviation_task.experiment.empirical.py
      ```
 
 ### Historical Context Deviation Experiments
 1. **Progressive Experiment with Fibonacci Sequences**:
+   File: `c.a.deviation_historical.model.by_agent.py`
    - Evaluate deviations using context windows based on Fibonacci numbers for argumentation validity.
    - Run:
      ```bash
-     python src/experiments/c.deviation_historical/a.deviation_historical.model.by_agent.py
+     python src/experiments/c.deviation_historical/c.a.deviation_historical.model.by_agent.py
      ```
 2. **Mean Historical Context Deviation Experiment by Window Size**:
+   File: `c.b.deviation_historical.analysis.py`
    - Evaluate minimum, maximum and average deviations using context windows based on Fibonacci numbers for argumentation validity.
    - Run:
      ```bash
-     python src/experiments/c.deviation_historical/b.deviation_historical.analysis.py
+     python src/experiments/c.deviation_historical/c.b.deviation_historical.analysis.py
      ```
 
 ### L-Formula Optimization Experiments
 1. **Experimental Parameter Tuning**:
+   File: `d.a.llm_formula.empirical.py`
    - Optimize `L` values by defining dynamic adjustment windows for key parameters.
    - The L function experiments involve:
      - Managing the optimization window to determine if the current value is optimal.
@@ -172,7 +178,7 @@ Let me know if you need additional refinements!
      - Theoretical principles evidence for balancing response brevity, task-specific alignment, and contextual relevance are directly applied here.
    - Run:
      ```bash
-     python src/experiments/d.llm_formula/a.llm_formula.empirical.py
+     python src/experiments/d.llm_formula/d.a.llm_formula.empirical.py
      ```
 
 ## Appendix
