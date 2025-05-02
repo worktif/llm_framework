@@ -115,17 +115,16 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
 - Generates histograms and initializes datasets for the priority coefficients `\alpha`, `\beta`, and `\gamma`.
 - Default coefficient values: `[0.01, 0.2, 0.5, 0.9, 1]`
 - Execution:
-    - ```shell
-    python src/experiments/a.task_priority/a.a.task_priority.histograms.py
+    ```shell
+      python src/experiments/a.task_priority/a.a.task_priority.histograms.py
     ```
-
 
 2. **Analyze Histogram Data**
    File: `a.b.task_priority.histograms.analysis.py`
 - Processes the histogram datasets to construct heatmaps reflecting inter-coefficient dependencies.
 - Execution:
-    - ```shell
-    python src/experiments/a.task_priority/a.b.task_priority.histograms.analysis.py
+    ```shell
+      python src/experiments/a.task_priority/a.b.task_priority.histograms.analysis.py
     ```
 
 
@@ -133,8 +132,8 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
    File: `a.c.task_priority.heatmaps.py`
 - Generates visual heatmaps illustrating the relationships among the priority coefficients.
 - Execution:
-    - ```shell
-    python src/experiments/a.task_priority/a.c.task_priority.heatmaps.py
+    ```shell
+      python src/experiments/a.task_priority/a.c.task_priority.heatmaps.py
     ```
 
 
@@ -144,8 +143,8 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
 - Generates randomized values for controlled experimental evaluation of the L-function in isolation.
 - Outputs include task-specific deviation metrics and alignment scores.
 - Execution:
-    - ```shell
-    python src/experiments/b.deviation_task/b.a.deviation_task.synth.py
+  ```shell
+      python src/experiments/b.deviation_task/b.a.deviation_task.synth.py
     ```
 
 
@@ -153,8 +152,8 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
    File: `b.b.deviation_task.experiment.empirical.py`
 - Executes empirical evaluation where lambda values follow sinusoidal functions, and model output vectors align with cosine-based ground truth for maximal consistency.
 - Execution:
-    - ```shell
-    python src/experiments/b.deviation_task/b.b.deviation_task.experiment.empirical.py
+  ```shell
+      python src/experiments/b.deviation_task/b.b.deviation_task.experiment.empirical.py
     ```
 
 
@@ -163,16 +162,16 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
    File: `c.a.deviation_historical.model.by_agent.py`
 - Evaluates historical context deviation across expanding context windows, incremented by Fibonacci sequence steps to ensure gradational argumentation validity.
 - Execution:
-    - ```shell
-    python src/experiments/c.deviation_historical/c.a.deviation_historical.model.by_agent.py
+  ```shell
+      python src/experiments/c.deviation_historical/c.a.deviation_historical.model.by_agent.py
     ```
 
 2. **Mean Historical Context Deviation by Window Size**
    File: `c.b.deviation_historical.analysis.py`
 - Computes statistical summaries (min, max, mean) of historical deviations across varying window sizes based on Fibonacci increments.
 - Execution:
-    - ```shell
-    python src/experiments/c.deviation_historical/c.b.deviation_historical.analysis.py
+  ```shell
+      python src/experiments/c.deviation_historical/c.b.deviation_historical.analysis.py
     ```
 
 ### L-Formula Optimization Experiments
@@ -184,8 +183,8 @@ This structure ensures modularity, clarity, and ease of navigation for all contr
     - Assessing the scalability and robustness of the formula across a broad spectrum of system-defined value distributions.
     - Direct application of theoretical foundations supporting trade-offs between output brevity, task-aligned deviation, and historical-contextual fidelity.
 - Execution:
-    - ```shell
-    python src/experiments/d.llm_formula/d.a.llm_formula.empirical.py
+  ```shell
+      python src/experiments/d.llm_formula/d.a.llm_formula.empirical.py
     ```
 
 ---
